@@ -33,6 +33,6 @@ print('startDate = {0}, endDate = {1}'.format(dt.strftime(
 # push raw scada data to db after passing through filtering pipeline
 isRawDataCreationSuccess = createDayAheadForecast(startDate,endDate,configDict)
 if isRawDataCreationSuccess:
-    print('DFM-2 DA forecast creation success...')
+    print('DFM-3 DA forecast creation success...')
 else:
-    print('DFM-2 DA forecast creation failure...')
+    print('DFM-3 DA forecast creation failure...')
