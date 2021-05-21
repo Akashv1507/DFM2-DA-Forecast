@@ -24,8 +24,9 @@ def createDayAheadForecast(startDate:dt.datetime ,endDate: dt.datetime, configDi
     modelPath:str = configDict['model_path']
     holidayExcelPath:str =configDict['holidayExcelPath']
     # listOfEntity =['WRLDCMP.SCADA1.A0046945','WRLDCMP.SCADA1.A0046948','WRLDCMP.SCADA1.A0046953','WRLDCMP.SCADA1.A0046957','WRLDCMP.SCADA1.A0046962','WRLDCMP.SCADA1.A0046978','WRLDCMP.SCADA1.A0046980','WRLDCMP.SCADA1.A0047000']
-    listOfEntity =['WRLDCMP.SCADA1.A0047000', 'WRLDCMP.SCADA1.A0046980', 'WRLDCMP.SCADA1.A0046957', 'WRLDCMP.SCADA1.A0046978']
-
+    listOfEntity =['WRLDCMP.SCADA1.A0047000', 'WRLDCMP.SCADA1.A0046980', 'WRLDCMP.SCADA1.A0046957', 'WRLDCMP.SCADA1.A0046978', "WRLDCMP.SCADA1.A0046945"]
+    # listOfEntity =["WRLDCMP.SCADA1.A0046945"]
+    
     #creating instance of class
     obj_demandFetchForModelRepo = DemandFetchForModelRepo(conString)
     obj_mlrPredictions = MlrPredictions(modelPath)
@@ -48,7 +49,7 @@ def createDayAheadForecast(startDate:dt.datetime ,endDate: dt.datetime, configDi
             #fetching weather for forecast date
             forecastDate = currDate + dt.timedelta(days=1)
             weatherDf = obj_weatherDataFetcher.fetchWeatherData(forecastDate, "WRLDCMP.SCADA1.A0047000")
-        
+           
             #generating holiday, weekend dummy variable
             holidayDummyDf = obj_holidayDummyGenerator.generateHolidayDummies(forecastDate)
             

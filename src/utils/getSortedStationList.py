@@ -69,5 +69,17 @@ def getSortedStationList(entityTag: str)-> List:
        'station_27', 'station_42', 'station_25', 'station_33',
        'station_18', 'station_17', 'station_29', 'station_23']
 
+    resDict['sortedStationList_A0046945'] =['station_38', 'station_40', 'station_12', 'station_39',
+       'station_26', 'station_11', 'station_15', 'station_43',
+       'station_19', 'station_22', 'station_30', 'station_10',
+       'station_31', 'station_34', 'station_5', 'station_14',
+       'station_13', 'station_27', 'station_33', 'station_36',
+       'station_28', 'station_35', 'station_32', 'station_2',
+       'station_6', 'station_37', 'station_16', 'station_23',
+       'station_7', 'station_9', 'station_3', 'station_25',
+       'station_8', 'station_44', 'station_20', 'station_21',
+       'station_29', 'station_1', 'station_24', 'station_4',
+       'station_18', 'station_42', 'station_17', 'station_41']
+
     return resDict[entitySortedStationList]
 
